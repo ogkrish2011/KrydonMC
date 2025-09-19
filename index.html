@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrydonMC - Premium Minecraft Server</title>
+    <meta name="description" content="Join KrydonMC - Experience the best Minecraft server with Survival, Bedwars, Minigames and more!">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-cubes"></i>
+                <span>KrydonMC</span>
+            </div>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class="fas fa-home"></i> Home
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <a href="#news" class="nav-link" data-section="news">
+                    <i class="fas fa-newspaper"></i> News
+                </a>
+                <a href="#store" class="nav-link" data-section="store">
+                    <i class="fas fa-shopping-cart"></i> Store
+                </a>
+                <a href="#vote" class="nav-link" data-section="vote">
+                    <i class="fas fa-vote-yea"></i> Vote
+                </a>
+                <a href="#voice" class="nav-link" data-section="voice">
+                    <i class="fas fa-microphone"></i> Voice Chat
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+                <a href="#login" class="nav-link login-btn" data-section="login">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </a>
+            </div>
+            
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-background">
+                    <div class="particles" id="particles"></div>
+                </div>
+                
+                <div class="hero-content">
+                    <div class="server-logo">
+                        <i class="fas fa-cubes"></i>
+                        <h1>KrydonMC</h1>
+                        <p class="tagline">Premium Minecraft Experience</p>
+                    </div>
+                    
+                    <div class="server-info">
+                        <!-- CUSTOMIZATION POINT: Replace with your actual server IP -->
+                        <div class="server-ip">
+                            <i class="fas fa-server"></i>
+                            <span class="ip-text">play.krydonmc.net</span>
+                            <button class="copy-ip" onclick="copyIP()">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="server-stats">
+                            <div class="stat">
+                                <span class="stat-number">247</span>
+                                <span class="stat-label">Players Online</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">1.20.1</span>
+                                <span class="stat-label">Version</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Uptime</span>
+                            </div>
+                        </div>
+                        
+                        <div class="cta-buttons">
+                            <button class="btn btn-primary" onclick="copyIP()">
+                                <i class="fas fa-play"></i>
+                                Join Now
+                            </button>
+                            <button class="btn btn-secondary" onclick="showSection('store')">
+                                <i class="fas fa-shopping-cart"></i>
+                                Store
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Join Instructions -->
+                <div class="join-instructions">
+                    <h3><i class="fas fa-gamepad"></i> How to Join</h3>
+                    <div class="instructions-grid">
+                        <div class="instruction-card">
+                            <div class="step-number">1</div>
+                            <h4>Open Minecraft</h4>
+                            <p>Launch your Minecraft client (Java Edition 1.20.1)</p>
+                        </div>
+                        <div class="instruction-card">
+                            <div class="step-number">2</div>
+                            <h4>Add Server</h4>
+                            <p>Click "Multiplayer" → "Add Server"</p>
+                        </div>
+                        <div class="instruction-card">
+                            <div class="step-number">3</div>
+                            <h4>Enter IP</h4>
+                            <p>Paste: <strong>play.krydonmc.net</strong></p>
+                        </div>
+                        <div class="instruction-card">
+                            <div class="step-number">4</div>
+                            <h4>Join & Play</h4>
+                            <p>Click "Join Server" and start your adventure!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-info-circle"></i> About KrydonMC</h2>
+                    <p>Discover what makes our server special</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Welcome to KrydonMC</h3>
+                        <p>KrydonMC is a premium Minecraft server offering the ultimate gaming experience. Our community-driven server features multiple game modes, custom plugins, and a dedicated staff team to ensure fair play and fun for everyone.</p>
+                        
+                        <div class="features-list">
+                            <div class="feature">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Anti-Grief Protection</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-users"></i>
+                                <span>Active Community</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-clock"></i>
+                                <span>24/7 Uptime</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-headset"></i>
+                                <span>Dedicated Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-modes">
+                        <h3>Game Modes</h3>
+                        <div class="modes-grid">
+                            <div class="mode-card">
+                                <div class="mode-icon">
+                                    <i class="fas fa-tree"></i>
+                                </div>
+                                <h4>Survival</h4>
+                                <p>Classic survival experience with custom features, land claiming, and player shops.</p>
+                                <div class="mode-features">
+                                    <span class="tag">Land Claims</span>
+                                    <span class="tag">Player Shops</span>
+                                    <span class="tag">Custom Enchants</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mode-card">
+                                <div class="mode-icon">
+                                    <i class="fas fa-bed"></i>
+                                </div>
+                                <h4>Bedwars</h4>
+                                <p>Intense PvP action! Protect your bed while destroying enemy beds in this exciting team-based game.</p>
+                                <div class="mode-features">
+                                    <span class="tag">4v4v4v4</span>
+                                    <span class="tag">Custom Maps</span>
+                                    <span class="tag">Ranked Matches</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mode-card">
+                                <div class="mode-icon">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                </div>
+                                <h4>Minigames</h4>
+                                <p>Variety of fun minigames including parkour, spleef, hide and seek, and custom adventures.</p>
+                                <div class="mode-features">
+                                    <span class="tag">Parkour</span>
+                                    <span class="tag">Spleef</span>
+                                    <span class="tag">Hide & Seek</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="community-features">
+                    <h3>Community Features</h3>
+                    <div class="community-grid">
+                        <div class="community-card">
+                            <i class="fab fa-discord"></i>
+                            <h4>Discord Integration</h4>
+                            <p>Stay connected with our active Discord community. Chat, share screenshots, and get support.</p>
+                        </div>
+                        <div class="community-card">
+                            <i class="fas fa-trophy"></i>
+                            <h4>Events & Competitions</h4>
+                            <p>Regular building contests, PvP tournaments, and seasonal events with amazing prizes.</p>
+                        </div>
+                        <div class="community-card">
+                            <i class="fas fa-medal"></i>
+                            <h4>Ranking System</h4>
+                            <p>Earn ranks through gameplay or purchase premium ranks for exclusive perks and privileges.</p>
+                        </div>
+                        <div class="community-card">
+                            <i class="fas fa-gift"></i>
+                            <h4>Rewards Program</h4>
+                            <p>Daily rewards, vote rewards, and special bonuses for active players.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-newspaper"></i> Latest News & Updates</h2>
+                    <p>Stay updated with server announcements and events</p>
+                </div>
+                
+                <div class="news-grid">
+                    <article class="news-card featured">
+                        <div class="news-meta">
+                            <span class="news-category">Update</span>
+                            <span class="news-date">Dec 15, 2024</span>
+                        </div>
+                        <h3>Season 2 Launch - New Survival World</h3>
+                        <p>We're excited to announce the launch of Survival Season 2! New world, fresh start, and amazing new features including custom biomes, enhanced economy system, and exclusive seasonal rewards.</p>
+                        <div class="news-tags">
+                            <span class="tag">Survival</span>
+                            <span class="tag">Season 2</span>
+                            <span class="tag">New Features</span>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-meta">
+                            <span class="news-category">Event</span>
+                            <span class="news-date">Dec 10, 2024</span>
+                        </div>
+                        <h3>Winter Building Contest</h3>
+                        <p>Join our annual Winter Building Contest! Theme: "Frozen Kingdoms". Grand prize winner receives VIP+ rank and exclusive cosmetics.</p>
+                        <div class="news-tags">
+                            <span class="tag">Contest</span>
+                            <span class="tag">Building</span>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-meta">
+                            <span class="news-category">Feature</span>
+                            <span class="news-date">Dec 5, 2024</span>
+                        </div>
+                        <h3>New Bedwars Maps Released</h3>
+                        <p>Three brand new Bedwars maps are now available! Experience "Crystal Caverns", "Sky Fortress", and "Ancient Temple" with unique layouts and strategies.</p>
+                        <div class="news-tags">
+                            <span class="tag">Bedwars</span>
+                            <span class="tag">Maps</span>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-meta">
+                            <span class="news-category">Maintenance</span>
+                            <span class="news-date">Dec 1, 2024</span>
+                        </div>
+                        <h3>Server Performance Improvements</h3>
+                        <p>We've upgraded our server hardware and optimized plugins for better performance. Expect reduced lag and improved gameplay experience!</p>
+                        <div class="news-tags">
+                            <span class="tag">Performance</span>
+                            <span class="tag">Optimization</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Store Section -->
+        <section id="store" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-shopping-cart"></i> KrydonMC Store</h2>
+                    <p>Support the server and unlock exclusive perks</p>
+                </div>
+                
+                <div class="store-categories">
+                    <button class="category-btn active" data-category="ranks">
+                        <i class="fas fa-crown"></i> Ranks
+                    </button>
+                    <button class="category-btn" data-category="crates">
+                        <i class="fas fa-box"></i> Crate Keys
+                    </button>
+                    <button class="category-btn" data-category="cosmetics">
+                        <i class="fas fa-palette"></i> Cosmetics
+                    </button>
+                </div>
+                
+                <!-- Ranks -->
+                <div class="store-category active" id="ranks">
+                    <div class="products-grid">
+                        <div class="product-card popular">
+                            <div class="product-badge">Most Popular</div>
+                            <div class="product-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>VIP Rank</h3>
+                            <div class="product-price">₹199</div>
+                            <div class="product-features">
+                                <div class="feature"><i class="fas fa-check"></i> Chat Colors</div>
+                                <div class="feature"><i class="fas fa-check"></i> /kit vip</div>
+                                <div class="feature"><i class="fas fa-check"></i> Priority Join</div>
+                                <div class="feature"><i class="fas fa-check"></i> 2x Vote Rewards</div>
+                                <div class="feature"><i class="fas fa-check"></i> Exclusive Cosmetics</div>
+                            </div>
+                            <!-- CUSTOMIZATION POINT: UPI Payment Integration -->
+                            <button class="btn btn-primary" onclick="initiatePayment('vip-rank', 199, 'VIP Rank')">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
+                        
+                        <div class="product-card premium">
+                            <div class="product-badge">Premium</div>
+                            <div class="product-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h3>VIP+ Rank</h3>
+                            <div class="product-price">₹399</div>
+                            <div class="product-features">
+                                <div class="feature"><i class="fas fa-check"></i> All VIP Benefits</div>
+                                <div class="feature"><i class="fas fa-check"></i> /kit vipplus</div>
+                                <div class="feature"><i class="fas fa-check"></i> /fly in spawn</div>
+                                <div class="feature"><i class="fas fa-check"></i> 5x Vote Rewards</div>
+                                <div class="feature"><i class="fas fa-check"></i> Premium Cosmetics</div>
+                                <div class="feature"><i class="fas fa-check"></i> Private Messages</div>
+                            </div>
+                            <button class="btn btn-primary" onclick="initiatePayment('vip-plus-rank', 399, 'VIP+ Rank')">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
+                        
+                        <div class="product-card legendary">
+                            <div class="product-badge">Legendary</div>
+                            <div class="product-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h3>MVP Rank</h3>
+                            <div class="product-price">₹799</div>
+                            <div class="product-features">
+                                <div class="feature"><i class="fas fa-check"></i> All VIP+ Benefits</div>
+                                <div class="feature"><i class="fas fa-check"></i> /kit mvp</div>
+                                <div class="feature"><i class="fas fa-check"></i> /fly everywhere</div>
+                                <div class="feature"><i class="fas fa-check"></i> 10x Vote Rewards</div>
+                                <div class="feature"><i class="fas fa-check"></i> Legendary Cosmetics</div>
+                                <div class="feature"><i class="fas fa-check"></i> Custom Join Messages</div>
+                            </div>
+                            <button class="btn btn-primary" onclick="initiatePayment('mvp-rank', 799, 'MVP Rank')">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Crate Keys -->
+                <div class="store-category" id="crates">
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <h3>Common Crate Key</h3>
+                            <div class="product-price">₹49</div>
+                            <div class="product-features">
+                                <div class="feature"><i class="fas fa-gift"></i> Basic Items</div>
+                                <div class="feature"><i class="fas fa-coins"></i> In-game Currency</div>
+                                <div class="feature"><i class="fas fa-tools"></i> Tools & Weapons</div>
+                            </div>
+                            <button class="btn btn-primary" onclick="initiatePayment('common-crate', 49, 'Common Crate Key')">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
+                        
+                        <div class="product-card popular">
+                            <div class="product-badge">Popular</div>
+                            <div class="product-icon">
+                                <i class="fas fa-key" style="color: #e74c3c;"></i>
+                            </div>
+                            <h3>Rare Crate Key</h3>
+                            <div class="product-price">₹99</div>
+                            <div class="product-features">
+                                <div class="feature"><i class="fas fa-gem"></i> Rare Items</div>
+                                <div class="feature"><i class="fas fa-magic"></i> Enchanted Gear</div>
+                                <div class="feature"><i class="fas fa-star"></i> Cosmetic Items</div>
+                            </div>
+                            <button class="btn btn-primary" onclick="initiatePayment('rare-crate', 99, 'Rare Crate Key')">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
+                        
+                        <div class="product-card legendary">
+                            <div class="product-badge">Legendary</div>
+                            <div class="product-icon">
+                                <i class="fas fa-key" style="color: #f39c12;"></i>
+                            </div>
+                            <h3>Legendary Crate Key</h3>
+                            <div class="product-price">₹199</div>
+                            <div class="product-features">
+                                <div class="feature"><i class="fas fa-trophy"></i> Legendary Items</div>
+                                <div class="feature"><i class="fas fa-dragon"></i> Exclusive Pets</div>
+                                <div class="feature"><i class="fas fa-crown"></i> Rank Upgrades</div>
+                            </div>
+                            <button class="btn btn-primary" onclick="initiatePayment('legendary-crate', 199, 'Legendary Crate Key')">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cosmetics -->
+                <div class="store-category" id="cosmetics">
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <i class="fas fa-hat-wizard"></i>
+                            </div>
+                            <h3>Pet Collection</h3>
+                            <div class="product-price">₹149</div>
+                            <div class="product-features">
+                                <div class="feature"><i class="fas fa-dog"></i> Wolf Companion</div>
+                                <div class="feature"><i class="fas fa-cat"></i> Cat Friend</div>
+                                <div class="feature"><i class="fas fa-dove"></i> Parrot Buddy</div>
+                            </div>
+                            <button class="btn btn-primary" onclick="initiatePayment('pet-collection', 149, 'Pet Collection')">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <h3>Particle Effects</h3>
+                            <div class="product-price">₹99</div>
+                            <div class="product-features">
+                                <div class="feature"><i class="fas fa-sparkles"></i> Trail Effects</div>
+                                <div class="feature"><i class="fas fa-heart"></i> Heart Particles</div>
+                                <div class="feature"><i class="fas fa-bolt"></i> Lightning Effects</div>
+                            </div>
+                            <button class="btn btn-primary" onclick="initiatePayment('particle-effects', 99, 'Particle Effects')">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h3>Chat Customization</h3>
+                            <div class="product-price">₹79</div>
+                            <div class="product-features">
+                                <div class="feature"><i class="fas fa-font"></i> Custom Fonts</div>
+                                <div class="feature"><i class="fas fa-rainbow"></i> Rainbow Text</div>
+                                <div class="feature"><i class="fas fa-comment"></i> Chat Bubbles</div>
+                            </div>
+                            <button class="btn btn-primary" onclick="initiatePayment('chat-custom', 79, 'Chat Customization')">
+                                <i class="fas fa-shopping-cart"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Payment Instructions -->
+                <div class="payment-info">
+                    <h3><i class="fas fa-info-circle"></i> Payment Instructions</h3>
+                    <div class="payment-steps">
+                        <div class="step">
+                            <span class="step-num">1</span>
+                            <p>Click "Buy Now" on any product to open your UPI app</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">2</span>
+                            <p>Complete the payment using your preferred UPI app</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">3</span>
+                            <p>Submit your transaction ID below for verification</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-num">4</span>
+                            <p>Receive your purchase within 24 hours!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Transaction ID Form -->
+                <div class="transaction-form">
+                    <h3><i class="fas fa-receipt"></i> Submit Transaction Details</h3>
+                    <form id="transactionForm">
+                        <div class="form-group">
+                            <label for="playerName">Minecraft Username</label>
+                            <input type="text" id="playerName" name="playerName" required placeholder="Enter your Minecraft username">
+                        </div>
+                        <div class="form-group">
+                            <label for="transactionId">Transaction ID</label>
+                            <input type="text" id="transactionId" name="transactionId" required placeholder="Enter UPI transaction ID">
+                        </div>
+                        <div class="form-group">
+                            <label for="productPurchased">Product Purchased</label>
+                            <select id="productPurchased" name="productPurchased" required>
+                                <option value="">Select product</option>
+                                <option value="vip-rank">VIP Rank - ₹199</option>
+                                <option value="vip-plus-rank">VIP+ Rank - ₹399</option>
+                                <option value="mvp-rank">MVP Rank - ₹799</option>
+                                <option value="common-crate">Common Crate Key - ₹49</option>
+                                <option value="rare-crate">Rare Crate Key - ₹99</option>
+                                <option value="legendary-crate">Legendary Crate Key - ₹199</option>
+                                <option value="pet-collection">Pet Collection - ₹149</option>
+                                <option value="particle-effects">Particle Effects - ₹99</option>
+                                <option value="chat-custom">Chat Customization - ₹79</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Submit for Verification
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vote Section -->
+        <section id="vote" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-vote-yea"></i> Vote for KrydonMC</h2>
+                    <p>Support our server and earn awesome rewards!</p>
+                </div>
+                
+                <div class="vote-content">
+                    <div class="vote-info">
+                        <h3>Why Vote?</h3>
+                        <div class="vote-benefits">
+                            <div class="benefit">
+                                <i class="fas fa-coins"></i>
+                                <div>
+                                    <h4>In-game Currency</h4>
+                                    <p>Earn coins for each vote to spend in our server shop</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-key"></i>
+                                <div>
+                                    <h4>Crate Keys</h4>
+                                    <p>Get free crate keys with random rare items</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-trophy"></i>
+                                <div>
+                                    <h4>Vote Ranks</h4>
+                                    <p>Unlock special vote ranks with exclusive perks</p>
+                                </div>
+                            </div>
+                            <div class="benefit">
+                                <i class="fas fa-gift"></i>
+                                <div>
+                                    <h4>Monthly Rewards</h4>
+                                    <p>Top voters get exclusive monthly prizes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="vote-sites">
+                        <h3>Vote on These Sites</h3>
+                        <div class="vote-grid">
+                            <div class="vote-site">
+                                <div class="site-info">
+                                    <h4>Minecraft-Server-List</h4>
+                                    <p class="vote-reward">Reward: 50 coins + 1 vote key</p>
+                                    <p class="vote-cooldown">Cooldown: 24 hours</p>
+                                </div>
+                                <a href="#" class="btn btn-vote" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Vote Now
+                                </a>
+                            </div>
+                            
+                            <div class="vote-site">
+                                <div class="site-info">
+                                    <h4>MinecraftServers.org</h4>
+                                    <p class="vote-reward">Reward: 50 coins + 1 vote key</p>
+                                    <p class="vote-cooldown">Cooldown: 24 hours</p>
+                                </div>
+                                <a href="#" class="btn btn-vote" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Vote Now
+                                </a>
+                            </div>
+                            
+                            <div class="vote-site">
+                                <div class="site-info">
+                                    <h4>Minecraft-MP</h4>
+                                    <p class="vote-reward">Reward: 50 coins + 1 vote key</p>
+                                    <p class="vote-cooldown">Cooldown: 24 hours</p>
+                                </div>
+                                <a href="#" class="btn btn-vote" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Vote Now
+                                </a>
+                            </div>
+                            
+                            <div class="vote-site">
+                                <div class="site-info">
+                                    <h4>TopMinecraftServers</h4>
+                                    <p class="vote-reward">Reward: 50 coins + 1 vote key</p>
+                                    <p class="vote-cooldown">Cooldown: 24 hours</p>
+                                </div>
+                                <a href="#" class="btn btn-vote" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> Vote Now
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="vote-instructions">
+                            <h4><i class="fas fa-info-circle"></i> How to Vote</h4>
+                            <ol>
+                                <li>Click "Vote Now" on any of the sites above</li>
+                                <li>Enter your Minecraft username exactly as it appears in-game</li>
+                                <li>Complete any verification steps (captcha, etc.)</li>
+                                <li>Submit your vote and wait for confirmation</li>
+                                <li>Your rewards will be automatically added to your account!</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="top-voters">
+                            <h4><i class="fas fa-medal"></i> This Month's Top Voters</h4>
+                            <div class="voter-list">
+                                <div class="voter-item">
+                                    <span class="position">#1</span>
+                                    <span class="username">Steve_Builder</span>
+                                    <span class="votes">124 votes</span>
+                                </div>
+                                <div class="voter-item">
+                                    <span class="position">#2</span>
+                                    <span class="username">Alex_Crafter</span>
+                                    <span class="votes">118 votes</span>
+                                </div>
+                                <div class="voter-item">
+                                    <span class="position">#3</span>
+                                    <span class="username">NoobMaster69</span>
+                                    <span class="votes">95 votes</span>
+                                </div>
+                                <div class="voter-item">
+                                    <span class="position">#4</span>
+                                    <span class="username">DiamondHunter</span>
+                                    <span class="votes">87 votes</span>
+                                </div>
+                                <div class="voter-item">
+                                    <span class="position">#5</span>
+                                    <span class="username">RedstoneExpert</span>
+                                    <span class="votes">82 votes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Voice Chat Section -->
+        <section id="voice" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-microphone"></i> Voice Chat</h2>
+                    <p>Talk with your friends while playing on KrydonMC</p>
+                </div>
+                
+                <div class="voice-content">
+                    <div class="voice-info">
+                        <h3>Discord Voice Channels</h3>
+                        <p>We use Discord for our voice communication system. Join our Discord server to access voice channels and chat with other players while gaming!</p>
+                        
+                        <div class="voice-features">
+                            <div class="feature-card">
+                                <i class="fas fa-users"></i>
+                                <h4>Public Voice Channels</h4>
+                                <p>Join general voice channels to chat with the community</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-lock"></i>
+                                <h4>Private Voice Channels</h4>
+                                <p>Create temporary private channels for your team</p>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-gamepad"></i>
+                                <h4>Game-Specific Channels</h4>
+                                <p>Dedicated channels for different game modes</p>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="btn btn-primary discord-btn">
+                            <i class="fab fa-discord"></i> Join Discord Server
+                        </a>
+                    </div>
+                    
+                    <div class="create-vc">
+                        <h3>Create Your Own Voice Channel</h3>
+                        <div class="vc-instructions">
+                            <div class="instruction-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">
+                                    <h4>Join Discord</h4>
+                                    <p>Make sure you're connected to our Discord server</p>
+                                </div>
+                            </div>
+                            <div class="instruction-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">
+                                    <h4>Find "Create VC" Channel</h4>
+                                    <p>Look for the "🎤 Create Voice Channel" in the voice channels category</p>
+                                </div>
+                            </div>
+                            <div class="instruction-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">
+                                    <h4>Join to Create</h4>
+                                    <p>Simply join this channel and a new private channel will be created for you</p>
+                                </div>
+                            </div>
+                            <div class="instruction-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">
+                                    <h4>Invite Friends</h4>
+                                    <p>Your friends can join your channel, and you have full control over it</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="vc-features">
+                            <h4>Voice Channel Features</h4>
+                            <div class="features-grid">
+                                <div class="feature">
+                                    <i class="fas fa-crown"></i>
+                                    <span>Channel Owner Controls</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-user-plus"></i>
+                                    <span>Invite/Kick Users</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-volume-mute"></i>
+                                    <span>Mute/Deafen Controls</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-edit"></i>
+                                    <span>Rename Your Channel</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-users-slash"></i>
+                                    <span>Set User Limits</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="fas fa-trash"></i>
+                                    <span>Auto-Delete When Empty</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="voice-rules">
+                        <h3>Voice Chat Rules</h3>
+                        <div class="rules-list">
+                            <div class="rule">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Be respectful to all players</span>
+                            </div>
+                            <div class="rule">
+                                <i class="fas fa-check-circle"></i>
+                                <span>No excessive background noise</span>
+                            </div>
+                            <div class="rule">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Use push-to-talk when needed</span>
+                            </div>
+                            <div class="rule">
+                                <i class="fas fa-times-circle"></i>
+                                <span>No spamming or ear-rape</span>
+                            </div>
+                            <div class="rule">
+                                <i class="fas fa-times-circle"></i>
+                                <span>No toxic behavior or harassment</span>
+                            </div>
+                            <div class="rule">
+                                <i class="fas fa-times-circle"></i>
+                                <span>No music bots in gameplay channels</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2><i class="fas fa-envelope"></i> Contact & Support</h2>
+                    <p>Need help? Get in touch with our team</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get Support</h3>
+                        <div class="support-options">
+                            <div class="support-option">
+                                <i class="fab fa-discord"></i>
+                                <div>
+                                    <h4>Discord Support</h4>
+                                    <p>Join our Discord server for instant help from staff and community</p>
+                                    <a href="#" class="btn btn-outline">Join Discord</a>
+                                </div>
+                            </div>
+                            
+                            <div class="support-option">
+                                <i class="fas fa-ticket-alt"></i>
+                                <div>
+                                    <h4>Support Tickets</h4>
+                                    <p>Create a private support ticket for account issues or reports</p>
+                                    <a href="#" class="btn btn-outline">Open Ticket</a>
+                                </div>
+                            </div>
+                            
+                            <div class="support-option">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Support</h4>
+                                    <p>Send us an email for business inquiries or detailed support requests</p>
+                                    <a href="mailto:support@krydonmc.net" class="btn btn-outline">Email Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-details">
+                            <h4>Server Information</h4>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <i class="fas fa-server"></i>
+                                    <div>
+                                        <strong>Server IP</strong>
+                                        <span>play.krydonmc.net</span>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-globe"></i>
+                                    <div>
+                                        <strong>Website</strong>
+                                        <span>www.krydonmc.net</span>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fab fa-discord"></i>
+                                    <div>
+                                        <strong>Discord</strong>
+                                        <span>discord.gg/krydonmc</span>
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div>
+                                        <strong>Support Hours</strong>
+                                        <span>24/7 Community Support</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <h3>Send us a Message</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName">Your Name</label>
+                                <input type="text" id="contactName" name="contactName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address</label>
+                                <input type="email" id="contactEmail" name="contactEmail" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactMinecraft">Minecraft Username (Optional)</label>
+                                <input type="text" id="contactMinecraft" name="contactMinecraft">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactSubject">Subject</label>
+                                <select id="contactSubject" name="contactSubject" required>
+                                    <option value="">Choose a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="billing">Billing Issue</option>
+                                    <option value="report">Player Report</option>
+                                    <option value="suggestion">Suggestion</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea id="contactMessage" name="contactMessage" rows="6" required placeholder="Please provide as much detail as possible..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="faq-section">
+                    <h3>Frequently Asked Questions</h3>
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <h4>How do I get my rank after purchase?</h4>
+                            <p>After completing your UPI payment, submit your transaction ID in the store section. We'll verify and deliver your rank within 24 hours.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Can I get a refund?</h4>
+                            <p>Due to the digital nature of our products, refunds are generally not available. Please contact support for exceptional circumstances.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>How do I appeal a ban?</h4>
+                            <p>Create a support ticket on Discord with your username and details about your ban. Our staff will review your case.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Is the server always online?</h4>
+                            <p>Yes! KrydonMC runs 24/7 with 99.9% uptime. We notify players in advance of any scheduled maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Section -->
+        <section id="login" class="section">
+            <div class="container">
+                <div class="login-container">
+                    <div class="login-tabs">
+                        <button class="tab-btn active" data-tab="login">Login</button>
+                        <button class="tab-btn" data-tab="register">Register</button>
+                    </div>
+                    
+                    <!-- Login Form -->
+                    <div class="tab-content active" id="login-tab">
+                        <div class="auth-form">
+                            <h2><i class="fas fa-sign-in-alt"></i> Login to KrydonMC</h2>
+                            <form id="loginForm">
+                                <div class="form-group">
+                                    <label for="loginUsername">Username or Email</label>
+                                    <input type="text" id="loginUsername" name="loginUsername" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="loginPassword">Password</label>
+                                    <input type="password" id="loginPassword" name="loginPassword" required>
+                                </div>
+                                
+                                <div class="form-options">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="rememberMe">
+                                        <span class="checkmark"></span>
+                                        Remember me
+                                    </label>
+                                    <a href="#" class="forgot-password">Forgot password?</a>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    <i class="fas fa-sign-in-alt"></i> Login
+                                </button>
+                            </form>
+                            
+                            <div class="auth-divider">
+                                <span>or continue with</span>
+                            </div>
+                            
+                            <!-- CUSTOMIZATION POINT: Discord OAuth Integration -->
+                            <button class="btn btn-discord" onclick="loginWithDiscord()">
+                                <i class="fab fa-discord"></i> Login with Discord
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Register Form -->
+                    <div class="tab-content" id="register-tab">
+                        <div class="auth-form">
+                            <h2><i class="fas fa-user-plus"></i> Join KrydonMC</h2>
+                            <form id="registerForm">
+                                <div class="form-group">
+                                    <label for="registerUsername">Username</label>
+                                    <input type="text" id="registerUsername" name="registerUsername" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="registerEmail">Email Address</label>
+                                    <input type="email" id="registerEmail" name="registerEmail" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="registerMinecraft">Minecraft Username</label>
+                                    <input type="text" id="registerMinecraft" name="registerMinecraft" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="registerPassword">Password</label>
+                                    <input type="password" id="registerPassword" name="registerPassword" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                                </div>
+                                
+                                <div class="form-options">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="agreeTerms" required>
+                                        <span class="checkmark"></span>
+                                        I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                                    </label>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full">
+                                    <i class="fas fa-user-plus"></i> Create Account
+                                </button>
+                            </form>
+                            
+                            <div class="auth-divider">
+                                <span>or register with</span>
+                            </div>
+                            
+                            <button class="btn btn-discord" onclick="registerWithDiscord()">
+                                <i class="fab fa-discord"></i> Register with Discord
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-cubes"></i>
+                    <span>KrydonMC</span>
+                </div>
+                <p>The ultimate Minecraft server experience. Join thousands of players in epic adventures!</p>
+                <div class="social-links">
+                    <!-- CUSTOMIZATION POINT: Add your social media links -->
+                    <a href="#" class="social-link discord" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="#" class="social-link youtube" title="YouTube (Coming Soon)">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="social-link twitter" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Server</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#vote">Vote</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="#store">Store</a></li>
+                    <li><a href="#voice">Voice Chat</a></li>
+                    <li><a href="#contact">Support</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="server-ip-footer">
+                    <strong>play.krydonmc.net</strong>
+                </div>
+                <p>Version: 1.20.1</p>
+                <p>Players: <span id="playerCount">247</span></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2024 KrydonMC. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Rules</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
