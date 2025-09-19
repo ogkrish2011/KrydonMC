@@ -153,11 +153,13 @@ function initiatePayment(productId, amount, productName) {
         
         // CUSTOMIZATION POINT: Replace with your UPI ID
         const upiId = '8091056604@fam';
-        const merchantName = 'KrydonMC';
         const merchantCode = '0000';
         
-        // Construct UPI deep link
-        const upiLink = `upi://pay?pa=${upiId}&pn=${merchantName}&mc=${merchantCode}&tid=${transactionId}&tr=${orderId}&am=${amount.toFixed(2)}&cu=INR&tn=Purchase%20${encodeURIComponent(productName)}%20from%20KrydonMC`;
+        // Use product name as the payee name so it shows in UPI app instead of personal name
+        const displayName = `KrydonMC - ${productName}`;
+        
+        // Construct UPI deep link with product name as payee name
+        const upiLink = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(displayName)}&mc=${merchantCode}&tid=${transactionId}&tr=${orderId}&am=${amount.toFixed(2)}&cu=INR&tn=${encodeURIComponent(productName + ' - KrydonMC Server')}`;
         
         console.log('Initiating UPI Payment:', {
             productId,
@@ -165,7 +167,16 @@ function initiatePayment(productId, amount, productName) {
             productName,
             transactionId,
             orderId,
+            displayName,
             upiLink
+        });
+        
+        // Show user what will appear in UPI app
+        console.log('UPI App will show:', {
+            payeeName: displayName,
+            amount: `₹${amount.toFixed(2)}`,
+            upiId: upiId,
+            note: `${productName} - KrydonMC Server`
         });
         
         // Store transaction details for verification
@@ -225,21 +236,26 @@ function showPaymentModal(productName, amount, transactionId, upiLink) {
                         <h4><i class="fas fa-mobile-alt"></i> Payment Instructions</h4>
                         <ol>
                             <li>Click the "Pay Now" button below to open your UPI app</li>
-                            <li>Verify the payment details in your UPI app</li>
-                            <li>Complete the payment using your preferred method</li>
+                            <li>In your UPI app, you'll see "KrydonMC - ${productName}" as the payee</li>
+                            <li>Verify the amount (₹${amount.toFixed(2)}) is correct</li>
+                            <li>Complete the payment using your preferred UPI method</li>
                             <li>Note down your transaction ID for verification</li>
-                            <li>Submit the transaction ID in the store section</li>
+                            <li>Submit the transaction ID in the store section below</li>
                         </ol>
                     </div>
                     
                     <div class="payment-details">
                         <div class="detail-row">
-                            <span>Merchant:</span>
-                            <span>KrydonMC</span>
+                            <span>Payee Name in UPI App:</span>
+                            <span>KrydonMC - ${productName}</span>
                         </div>
                         <div class="detail-row">
                             <span>Amount:</span>
                             <span>₹${amount.toFixed(2)}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span>UPI ID:</span>
+                            <span>8091056604@fam</span>
                         </div>
                         <div class="detail-row">
                             <span>Reference ID:</span>
@@ -257,6 +273,14 @@ function showPaymentModal(productName, amount, transactionId, upiLink) {
                     </div>
                     
                     <div class="payment-note">
+                        <div class="upi-preview">
+                            <h5><i class="fas fa-mobile-alt"></i> What you'll see in your UPI app:</h5>
+                            <div class="upi-details">
+                                <span><strong>Payee:</strong> KrydonMC - ${productName}</span>
+                                <span><strong>Amount:</strong> ₹${amount.toFixed(2)}</span>
+                                <span><strong>UPI ID:</strong> 8091056604@fam</span>
+                            </div>
+                        </div>
                         <p><i class="fas fa-info-circle"></i> After completing payment, please submit your transaction ID in the store section for verification and delivery.</p>
                     </div>
                 </div>
@@ -469,6 +493,38 @@ function addModalStyles() {
             border-radius: var(--radius-medium);
             padding: 16px;
             text-align: center;
+        }
+        
+        .upi-preview {
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: var(--radius-small);
+            padding: 16px;
+            margin-bottom: 16px;
+            text-align: left;
+        }
+        
+        .upi-preview h5 {
+            color: var(--accent-success);
+            margin: 0 0 12px 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        
+        .upi-details {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        
+        .upi-details span {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-family: monospace;
+            background: var(--bg-primary);
+            padding: 4px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
         }
         
         .payment-note p {
@@ -1073,6 +1129,19 @@ window.addEventListener('load', function() {
     }
 });
 
+// ===== UPI TESTING FUNCTION =====
+function testUPIPayment() {
+    console.log('Testing UPI Payment Flow...');
+    
+    // Test with VIP Rank
+    const testProduct = 'VIP Rank';
+    const testAmount = 199;
+    const testProductId = 'vip-rank';
+    
+    console.log('Opening test payment for:', testProduct);
+    initiatePayment(testProductId, testAmount, testProduct);
+}
+
 // ===== EXPORT FUNCTIONS FOR GLOBAL ACCESS =====
 window.KrydonMC = {
     showSection,
@@ -1083,7 +1152,8 @@ window.KrydonMC = {
     loginWithDiscord,
     registerWithDiscord,
     closePaymentModal,
-    closeAlert
+    closeAlert,
+    testUPIPayment
 };
 
 console.log('KrydonMC Website JavaScript Loaded Successfully!');
